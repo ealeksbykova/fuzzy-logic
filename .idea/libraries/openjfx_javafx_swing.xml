@@ -1,0 +1,29 @@
+<component name="libraryTable">
+  <library name="openjfx.javafx.swing" type="repository">
+    <properties maven-id="org.openjfx:javafx-swing:23" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/javafx-swing-23.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javafx-swing-23-mac.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javafx-graphics-23.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javafx-graphics-23-mac.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javafx-base-23.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javafx-base-23-mac.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/lib/javafx-swing-23-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javafx-swing-23-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javafx-graphics-23-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javafx-graphics-23-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javafx-base-23-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javafx-base-23-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/javafx-swing-23-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javafx-swing-23-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javafx-graphics-23-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javafx-graphics-23-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javafx-base-23-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javafx-base-23-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
