@@ -1,33 +1,35 @@
-import javax.swing.*;
-import java.awt.*;
 import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Enter A number set in format: 1:0.7 2:0.3");
-        Map<Integer, Double> A = Parser.parseInput(scan.nextLine());
-
-        System.out.println("Enter B number set in format: 1:0.7 2:0.3");
-        Map<Integer, Double> B = Parser.parseInput(scan.nextLine());
-
         System.out.println("Enter operation what you want to do over the sets:");
         System.out.println("  * association -> enter 1");
         System.out.println("  * intersection -> enter 2");
-
+        System.out.println("  * subtraction -> enter 3");
+        System.out.println("  * addition -> enter 4");
         Operation operation = Parser.parseOperation(scan.nextLine());
 
-        Map<Integer, Double> result = Calculator.calculate(A, B, operation);
+        System.out.println("Enter A number set in format: 1:0.7 2:0.3");
+        Map<Integer, Float> A = Parser.parseInput(scan.nextLine());
 
-        float[] ints = {0.1f, 0.2f, 0.3f, 0.4f, 0.5f, 0.4f, 0.8f};
+        if (!Operation.ADDITION.equals(operation)) {
+            System.out.println("Enter B number set in format: 1:0.7 2:0.3");
+            Map<Integer, Float> B = Parser.parseInput(scan.nextLine());
 
-        JFrame f = new JFrame();
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        f.add(new Draw(ints, ints.length, Color.blue));
-        f.setSize(400, 400);
-        f.setLocation(200, 200);
-        f.setVisible(true);
+            Map<Integer, Float> result = Calculator.calculate(A, B, operation);
 
+            final ChartDemo demo = new ChartDemo(operation.toString(), A, B, result);
+            demo.pack();
+            demo.setVisible(true);
+        } else {
+
+            Map<Integer, Float> result = Calculator.calculate(A, null, operation);
+
+            final ChartDemo demo = new ChartDemo(operation.toString(), A, null, result);
+            demo.pack();
+            demo.setVisible(true);
+        }
     }
 }
